@@ -1,0 +1,228 @@
+name: getx_tut
+description: A new Flutter project.
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.2 <4.0.0'
+#  sdk: '>=3.0.5 <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+
+  get: ^4.6.5
+  shared_preferences: ^2.2.0
+  http: ^1.1.0
+  # use for quick use data storage
+  get_storage: ^2.1.1
+  # for internet connectivity
+  connectivity_plus: ^4.0.2
+  # for picking image --> for using it add android:requestLegacyExternalStorage="true" as an attribute to the <application> tag in AndroidManifest.xml
+  image_picker: ^1.0.4
+  # for image_cropper add in AndroidManifest.xml file below code in activity section
+  #  <activity
+  #    android:name="com.yalantis.ucrop.UCropActivity"
+  #    android:screenOrientation="portrait"
+  #    android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+  image_cropper: ^5.0.0
+  flutter_image_compress: ^2.0.4
+
+  carousel_slider: ^4.2.1
+  cached_network_image: ^3.2.3
+
+  # for video_player use below line on the AndroidManifest.xml
+  # <uses-permission android:name="android.permission.INTERNET"/>
+  video_player: ^2.7.1
+  chewie: ^1.7.1
+
+  # for speech_to_text:
+  #  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  #  <uses-permission android:name="android.permission.INTERNET"/>
+  #  <uses-permission android:name="android.permission.BLUETOOTH"/>
+  #  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+  #  <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+  # for speech_to_text: Android SDK 30 or later
+  #  <queries>
+  #    <intent>
+  #      <action android:name="android.speech.RecognitionService" />
+  #    </intent>
+  #  </queries>
+  speech_to_text: ^6.3.0
+  avatar_glow: ^2.0.2
+
+  fancy_bottom_navigation_2: ^0.3.5
+
+  signature: ^5.4.0
+  flutter_colorpicker: ^1.0.3
+  # Add the following to your "gradle.properties" file:
+  #  android.useAndroidX=true
+  #  android.enableJetifier=true
+  # Make sure you set the compileSdkVersion in your "android/app/build.gradle" file to 33:
+  #  android {
+  #    compileSdkVersion 33
+  #    ...
+  #  }
+  permission_handler: ^11.0.0
+  #  <application android:requestLegacyExternalStorage="true" .....> in AndroidManifest.xml
+  image_gallery_saver: ^2.0.3
+
+  qr_flutter: ^4.1.0
+  flutter_barcode_scanner: ^2.0.0
+
+  skeletons: ^0.0.3
+
+  #  <!-- Provide required visibility configuration for API level 30 and above -->
+  #    <queries>
+  #      <!-- If your app checks for SMS support -->
+  #      <intent>
+  #        <action android:name="android.intent.action.VIEW" />
+  #        <data android:scheme="sms" />
+  #      </intent>
+  #      <!-- If your app checks for call support -->
+  #      <intent>
+  #        <action android:name="android.intent.action.VIEW" />
+  #        <data android:scheme="tel" />
+  #      </intent>
+  #    </queries>
+  url_launcher: ^6.1.14
+  flutter_phone_direct_caller: ^2.1.1
+
+  scratcher: ^2.4.0
+
+  expandable_bottom_sheet: ^1.1.1+1
+
+  #  in gradle property:
+  #    android.useAndroidX=true
+  #    android.enableJetifier=true
+  #  in build.gradle:
+  #    compileSdkVersion 33
+  #  in Manifest file:
+  #    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  #    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  #    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+  geolocator: ^10.1.0
+    #  in gradle property:
+    #    android.useAndroidX=true
+    #    android.enableJetifier=true
+    #  in build.gradle:
+    #    compileSdkVersion 33
+  geocoding: ^2.1.0
+
+  emoji_picker_flutter: ^1.6.1
+
+  intl: ^0.18.1
+
+  #  flutter_elegant_number_button: ^0.0.6        # for A079
+
+  numberpicker: ^2.1.2          # for A080
+
+  flip_card: ^0.7.0             # for A086
+
+  shake: ^2.2.0                 # for A087
+
+  multi_select_flutter: ^4.1.3  # for A088
+
+  multiselect: ^0.1.0           # for A089
+
+  fab_circular_menu_plus: ^0.0.1    # for A090
+
+  shrink_sidemenu: ^2.0.0+2-null-safety   # for A091
+
+  panorama_viewer: ^1.0.1       # for A092
+
+  reviews_slider: ^2.0.0        # for A093
+
+  rating_dialog: ^2.0.4         # for A094
+
+  confetti: ^0.7.0              # for A095
+
+  draggable_expandable_fab: ^1.0.0      # for A098
+
+  video_trimmer: ^3.0.1         # for A099
+  file_picker: ^6.1.1           # for A099
+
+  like_button: ^2.0.5           # for A103
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/logo.png
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
